@@ -4,13 +4,22 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon"
+    "start": "nodemon",
+    "production": "pm2 start index.js --name express-api-test",
+    "pm2monit": "pm2 monit",
+    "pm2status": "pm2 status",
+    "pm2show": "pm2 show 0",
+    "pm2restart": "pm2 restart 0",
+    "pm2stop": "pm2 stop 0",
+    "pm2kill": "pm2 kill"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.17.2"
+    "body-parser": "^1.19.1",
+    "express": "^4.17.2",
+    "pm2": "^5.1.2"
   },
   "devDependencies": {
     "nodemon": "^2.0.15"
